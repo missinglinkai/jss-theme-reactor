@@ -3,9 +3,9 @@
   "description": "Powerful theming layer for use with the JSS library (CSS in JS)",
   "version": "0.12.3",
   "scripts": {
-    "build": "babel src --ignore *.spec.js --out-dir dist && && babel-node scripts/copy-files.js",
-    "build-publish": "npm run build && cd build && npm publish && cd .. && npm run clean",
-    "clean": "rimraf build",
+    "build": "babel src --ignore *.spec.js --out-dir dist && babel-node scripts/copy-files.js",
+    "build-publish": "npm run build && cd dist && npm publish && cd .. && npm run clean",
+    "clean": "rimraf dist",
     "flow": "flow --show-all-errors",
     "lint": "eslint src test/integration && echo \"eslint: no lint errors\"",
     "test": "cross-env NODE_ENV=test mocha",
