@@ -31,12 +31,12 @@
     "url": "https://github.com/iamstarkov/jss-theme-reactor/issues"
   },
   "dependencies": {
+    "jss": "^8.1.0",
+    "jss-preset-default": "^3.0.0",
+    "jss-vendor-prefixer": "^6.0.0",
     "murmurhash-js": "^1.0.0"
   },
   "peerDependencies": {
-    "jss": "^8.0.0",
-    "jss-preset-default": "^3.0.0",
-    "jss-vendor-prefixer": "^6.0.0",
     "prop-types": "^15.5.0",
     "react": "^15.5.0"
   },
