@@ -1,10 +1,14 @@
 {
-  "name": "jss-theme-reactor-build",
+  "name": "@iamstarkov/jss-theme-reactor",
   "description": "Powerful theming layer for use with the JSS library (CSS in JS)",
-  "private": true,
+  "main": "dist",
+  "files": [
+    "src",
+    "dist"
+  ],
   "version": "0.11.1",
   "scripts": {
-    "build": "babel src --ignore *.spec.js --out-dir build && babel-node scripts/copy-files.js",
+    "build": "babel src --ignore *.spec.js --out-dir dist",
     "build-publish": "npm run build && cd build && npm publish && cd .. && npm run clean",
     "clean": "rimraf build",
     "flow": "flow --show-all-errors",
@@ -13,7 +17,7 @@
     "test:coverage": "cross-env NODE_ENV=test BABEL_ENV=coverage nyc mocha && nyc report -r lcovonly",
     "test:watch": "cross-env NODE_ENV=test mocha -w"
   },
-  "author": "Nathan Marks <info@nathanmarks.io> (http://nathanmarks.io)",
+  "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com)",
   "keywords": [
     "jss",
     "css",
@@ -25,17 +29,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nathanmarks/jss-theme-reactor.git"
+    "url": "https://github.com/iamstarkov/jss-theme-reactor.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nathanmarks/jss-theme-reactor/issues"
+    "url": "https://github.com/iamstarkov/jss-theme-reactor/issues"
   },
   "dependencies": {
-    "jss": "^8.1.0",
+    "murmurhash-js": "^1.0.0"
+  },
+  "peerDependencies": {
+    "jss": "^8.0.0",
     "jss-preset-default": "^3.0.0",
     "jss-vendor-prefixer": "^6.0.0",
-    "murmurhash-js": "^1.0.0"
+    "prop-types": "^15.5.0",
+    "react": "^15.5.0"
   },
   "devDependencies": {
     "app-module-path": "^2.1.0",
@@ -63,9 +71,13 @@
     "flow-bin": "^0.37.0",
     "fs-extra": "^1.0.0",
     "jsdom": "^9.8.3",
+    "jss": "^8.1.0",
+    "jss-preset-default": "^3.0.0",
+    "jss-vendor-prefixer": "^6.0.0",
     "mocha": "^3.1.2",
     "nyc": "^10.1.2",
-    "react": "^15.3.2",
+    "prop-types": "^15.5.0",
+    "react": "^15.5.0",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "rimraf": "^2.5.4",

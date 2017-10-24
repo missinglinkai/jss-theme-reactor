@@ -1,7 +1,7 @@
 dist
 node_modules
 npm-debug.log
-build
+dist
 lib
 coverage
 
