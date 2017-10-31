@@ -1,10 +1,7 @@
-dist
 node_modules
 npm-debug.log
-dist
 lib
 coverage
-
 # OS files
 .DS_STORE
 .vscode
