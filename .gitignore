@@ -1,8 +1,0 @@
-node_modules
-npm-debug.log
-lib
-coverage
-# OS files
-.DS_STORE
-.vscode
-.nyc_output
